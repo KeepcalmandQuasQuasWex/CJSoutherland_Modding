@@ -1,0 +1,5 @@
+package cj.southerland.client;
+
+public class ClientProxy {
+
+}

@@ -1,0 +1,5 @@
+package cj.southerland.MyBlocks;
+
+public class BaseBlock {
+
+}

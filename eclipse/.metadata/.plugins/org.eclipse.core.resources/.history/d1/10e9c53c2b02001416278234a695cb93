@@ -1,0 +1,11 @@
+package cj.southerland.MyItems;
+
+public class ItemSunStrike extends Item
+{
+  public ItemSunStrike()
+  {
+    super();
+    setCreativeTab(CreativeTabs.tabCombat);
+    setUnlocalizedName("SunStrike");
+  }
+}

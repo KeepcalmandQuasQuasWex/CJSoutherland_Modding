@@ -1,0 +1,8 @@
+package tutorial.DMAexample.MyItems;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class MyBowItem {
+
+}

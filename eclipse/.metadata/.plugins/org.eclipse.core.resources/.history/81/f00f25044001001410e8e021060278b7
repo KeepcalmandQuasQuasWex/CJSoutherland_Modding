@@ -1,0 +1,35 @@
+package cj.southerland;
+
+//Recipes
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class MyCode {
+  
+	public static void MyBlocks(){		
+		
+	}
+	public static void MyRecipes(){
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.brown_mushroom),  new Object[] {new ItemStack(Items.cookie)});
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.sponge),  new Object[] {new ItemStack(Items.clock)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.fire), new Object[]{
+			"AAA",
+		    "AAA",
+			"AAA",
+			'A', Blocks.brown_mushroom,
+		});
+		ItemStack dirtStack = new ItemStack(Blocks.dirt);
+		ItemStack diamondStack = new ItemStack(Items.diamond,64);
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.end_portal),  new Object[] {new ItemStack(Blocks.beacon)});
+		GameRegistry.addSmelting(Blocks.packed_ice, new ItemStack(Blocks.ice), 0.01F);
+		GameRegistry.addSmelting(Items.magma_cream, new ItemStack(Items.ender_eye), 0.01F);
+	}
+	public static void MyItems(){
+		
+	}
+}

@@ -1,0 +1,14 @@
+package cj.southerland.MyItems;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class Exort extends Item {	
+	public Exort(){
+	setCreativeTab(CreativeTabs.tabMaterials);
+	setUnlocalizedName("Exort");
+	setMaxStackSize(64);
+
+
+}
+}

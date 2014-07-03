@@ -1,0 +1,6 @@
+package cj.southerland.MyItems;
+
+public class Snippet {
+	/summon Creeper ~ ~ ~ {powered:1,CustomName:Powered Creeper}
+}
+

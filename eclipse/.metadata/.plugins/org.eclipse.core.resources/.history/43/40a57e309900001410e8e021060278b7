@@ -1,0 +1,23 @@
+package cj.southerland;
+
+//Recipes
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class MyCode {
+  
+	public static void MyBlocks(){		
+		
+	}
+	public static void MyRecipes(){
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.brown_mushroom),  new Object[] {new ItemStack(Items.cookie)});
+	}
+	public static void MyItems(){
+		
+	}
+}

@@ -1,0 +1,11 @@
+package cj.southerland.MyItems;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class Wex extends Item {	
+	public Wex(){
+	setCreativeTab(CreativeTabs.tabMaterials);
+	setUnlocalizedName("Exort");
+	setMaxStackSize(64);
+	}}

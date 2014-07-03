@@ -1,0 +1,32 @@
+package cj.southerland;
+
+//Recipes
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class MyCode {
+  
+	public static void MyBlocks(){		
+		
+	}
+	public static void MyRecipes(){
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.brown_mushroom),  new Object[] {new ItemStack(Items.cookie)});
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.sponge),  new Object[] {new ItemStack(Items.clock)});
+		GameRegistry.addRecipe(new ItemStack(Items.dye, 2, 15), new Object[]{
+			//make sure to put in appropriate spaces or else code will not work!
+			            "AB ",
+			            "AAC",
+			            "A  ",
+			            'A', Items.cookie, 'B', Blocks.dirt, 'C', new ItemStack(Items.dye, 1, 1)
+			        });
+
+	}
+	public static void MyItems(){
+		
+	}
+}
