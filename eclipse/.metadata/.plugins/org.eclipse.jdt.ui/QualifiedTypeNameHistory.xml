@@ -8,6 +8,22 @@
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="tutorial.DMAexample.MyCode"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemArmor.ArmorMaterial"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.player.EntityPlayer"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.projectile.EntitySnowball"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.ArrowNockEvent"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.projectile.EntityFireball"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.projectile.EntitySmallFireball"/>
+<fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.ArrowLooseEvent"/>
+<fullyQualifiedTypeName name="net.minecraftforge.common.MinecraftForge"/>
+<fullyQualifiedTypeName name="net.minecraft.enchantment.EnchantmentHelper"/>
+<fullyQualifiedTypeName name="net.minecraft.enchantment.Enchantment"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.EntityLivingBase"/>
+<fullyQualifiedTypeName name="net.minecraft.util.MovingObjectPosition"/>
+<fullyQualifiedTypeName name="net.minecraft.world.World"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.projectile.EntityThrowable"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.EntityLiving"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
 </qualifiedTypeNameHistroy>
