@@ -8,8 +8,10 @@ import net.minecraft.init.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
+
 //MyBlocks Imports
 import java.util.List;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -25,6 +27,7 @@ import net.minecraft.item.ItemFood;
 import cj.southerland.MyBlocks.RubyOre;
 import cj.southerland.MyBlocks.PureDerp;
 
+import cj.southerland.MyItems.ChaosMeteor;
 //MyItems
 import cj.southerland.MyItems.Exort;
 import cj.southerland.MyItems.FoodTango;
@@ -42,7 +45,8 @@ public class MyCode {
 	public static Item FoodTango = new ItemFood(32,10,false);
 	public static Item Wex;
 	public static Item quas;
-	public static Item SunStrike;
+	public static Item sunStrike;
+	public static Item Chaosmeteor;
 	
 	
 	public static void MyBlocks(){
@@ -90,8 +94,16 @@ public class MyCode {
 		ItemStack pumpkinStack = new ItemStack(Blocks.pumpkin);
 		ItemStack snowballStack = new ItemStack(Items.snowball);
 		ItemStack quasStack = new ItemStack(quas);
+		ItemStack blastStack = new ItemStack(sunStrike);
+		ItemStack WexStack = new ItemStack(Wex);
+		ItemStack ExortStack = new ItemStack(Exort);
+		ItemStack BombStack = new ItemStack(Chaosmeteor);
+		
+		GameRegistry.addShapelessRecipe(blastStack,quasStack,WexStack,ExortStack);
 		
 		GameRegistry.addShapelessRecipe(quasStack,iceStack,pumpkinStack,snowballStack);
+		
+		GameRegistry.addShapelessRecipe(BombStack, WexStack, ExortStack, ExortStack);
 		
 		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.end_portal),  new Object[] {new ItemStack(Blocks.beacon)});
 		
@@ -100,7 +112,7 @@ public class MyCode {
 		ItemStack diamondStack1 = new ItemStack(Items.diamond);
 		ItemStack waterStack = new ItemStack(Items.water_bucket);
 		ItemStack fire_chargeStack = new ItemStack(Items.fire_charge);
-		ItemStack WexStack = new ItemStack(Wex);
+		
 		
 		GameRegistry.addShapelessRecipe(WexStack,diamondStack1,waterStack,fire_chargeStack);
 		
@@ -108,7 +120,7 @@ public class MyCode {
 		
 		ItemStack netherrackStack = new ItemStack(Blocks.netherrack);
 		ItemStack flintStack = new ItemStack(Items.flint);
-		ItemStack ExortStack = new ItemStack(Exort);
+		
 		
 		GameRegistry.addShapelessRecipe(ExortStack,fire_chargeStack,netherrackStack,flintStack);
 		
@@ -131,14 +143,16 @@ public static void MyItems(){
 	FoodTango = new FoodTango(5015, 10, false).setUnlocalizedName("FoodTango");
 	Wex = new Wex();
 	quas = new Quas();
-	SunStrike = new SunStrike();
+	sunStrike = new SunStrike();
+	Chaosmeteor = new ChaosMeteor();
 
 	
 	GameRegistry.registerItem(Exort, "Exort");
 	GameRegistry.registerItem(FoodTango, "FoodTango");
 	GameRegistry.registerItem(Wex, "Wex");
 	GameRegistry.registerItem(quas, "Quas");
-	GameRegistry.registerItem(SunStrike, "Sunstrike");
+	GameRegistry.registerItem(sunStrike, "Sunstrike");
+	GameRegistry.registerItem(Chaosmeteor, "ChaosMeteor");
 }
 
 		

@@ -1,0 +1,149 @@
+package cj.southerland;
+
+//Recipes
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.item.ItemStack;
+import net.minecraft.init.Items;
+import net.minecraft.init.Blocks;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.crafting.FurnaceRecipes;
+import cpw.mods.fml.common.registry.GameRegistry;
+//MyBlocks Imports
+import java.util.List;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.IIcon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.item.ItemFood;
+
+//MyBlocks
+import cj.southerland.MyBlocks.RubyOre;
+import cj.southerland.MyBlocks.PureDerp;
+
+//MyItems
+import cj.southerland.MyItems.Exort;
+import cj.southerland.MyItems.FoodTango;
+import cj.southerland.MyItems.Wex;
+import cj.southerland.MyItems.Quas;
+import cj.southerland.MyItems.SunStrike;
+public class MyCode {
+  
+	//List Blocks Here #setupBLOCK
+	public static Block rubyOre;
+	public static Block pureDerp;
+	
+	//List Items Here
+	public static Item Exort;
+	public static Item FoodTango = new ItemFood(32,10,false);
+	public static Item Wex;
+	public static Item quas;
+	public static Item sunStrike;
+	
+	
+	public static void MyBlocks(){
+
+		//Blocks #setupBLOCK
+	//RubyOre
+		rubyOre = new RubyOre (Material.ground)
+		.setHardness(0.9F)
+		.setStepSound(Block.soundTypeGravel)
+		.setBlockName("rubyOre")
+		.setCreativeTab(CreativeTabs.tabBlock)
+		.setBlockTextureName("redstone_ore");
+		
+		//Harvest Level 
+
+		//Register #setupBLOCK
+		GameRegistry.registerBlock(rubyOre, "RubyOre");
+		//PureDerp
+				pureDerp = new PureDerp (Material.ground)
+				.setHardness(0.9F)
+				.setStepSound(Block.soundTypeGravel)
+				.setBlockName("pureDerp")
+				.setCreativeTab(CreativeTabs.tabBlock)
+				.setBlockTextureName("gold_block");
+				
+				//Harvest Level 
+
+				//Register #setupBLOCK
+				GameRegistry.registerBlock(pureDerp, "PureDerp");
+	}
+	public static void MyRecipes(){
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.brown_mushroom),  new Object[] {new ItemStack(Items.cookie)});
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.sponge),  new Object[] {new ItemStack(Items.clock)});
+		GameRegistry.addRecipe(new ItemStack(Blocks.fire), new Object[]{
+			"AAA",
+		    "AAA",
+			"AAA",
+			'A', Blocks.brown_mushroom,
+		});
+		
+		ItemStack dirtStack = new ItemStack(Blocks.dirt);
+		ItemStack diamondStack = new ItemStack(Items.diamond,64);
+		
+		ItemStack iceStack = new ItemStack(Blocks.ice);
+		ItemStack pumpkinStack = new ItemStack(Blocks.pumpkin);
+		ItemStack snowballStack = new ItemStack(Items.snowball);
+		ItemStack quasStack = new ItemStack(quas);
+		
+		GameRegistry.addShapelessRecipe(quasStack,iceStack,pumpkinStack,snowballStack);
+		
+		GameRegistry.addShapelessRecipe( new ItemStack(Blocks.end_portal),  new Object[] {new ItemStack(Blocks.beacon)});
+		
+		
+		
+		ItemStack diamondStack1 = new ItemStack(Items.diamond);
+		ItemStack waterStack = new ItemStack(Items.water_bucket);
+		ItemStack fire_chargeStack = new ItemStack(Items.fire_charge);
+		ItemStack WexStack = new ItemStack(Wex);
+		
+		GameRegistry.addShapelessRecipe(WexStack,diamondStack1,waterStack,fire_chargeStack);
+		
+		
+		
+		ItemStack netherrackStack = new ItemStack(Blocks.netherrack);
+		ItemStack flintStack = new ItemStack(Items.flint);
+		ItemStack ExortStack = new ItemStack(Exort);
+		
+		GameRegistry.addShapelessRecipe(ExortStack,fire_chargeStack,netherrackStack,flintStack);
+		
+		GameRegistry.addSmelting(Blocks.packed_ice, new ItemStack(Blocks.ice), 0.01F);
+		GameRegistry.addSmelting(Items.slime_ball, new ItemStack(FoodTango), 0.01F);
+		
+		GameRegistry.addSmelting(Items.magma_cream, new ItemStack(Items.ender_eye), 0.01F);
+		ItemStack newEnchantment = new ItemStack(Blocks.red_flower,1);
+		newEnchantment.addEnchantment(Enchantment.sharpness, 34);
+		
+		GameRegistry.addSmelting(Blocks.redstone_torch, newEnchantment, 0.01F);
+		ItemStack newEnchantment1 = new ItemStack(Items.diamond_shovel,1);
+		newEnchantment1.addEnchantment(Enchantment.knockback, 127);
+		
+		GameRegistry.addSmelting(Blocks.diamond_block, newEnchantment1, 0.01F);
+	}
+	
+public static void MyItems(){
+	Exort = new Exort();
+	FoodTango = new FoodTango(5015, 10, false).setUnlocalizedName("FoodTango");
+	Wex = new Wex();
+	quas = new Quas();
+	sunStrike = new Sunstrike():
+
+	
+	GameRegistry.registerItem(Exort, "Exort");
+	GameRegistry.registerItem(FoodTango, "FoodTango");
+	GameRegistry.registerItem(Wex, "Wex");
+	GameRegistry.registerItem(quas, "Quas");
+	GameRegistry.registerItem(sunStrike, "Sunstrike");
+}
+
+		
+
+
+	{
+	}
+}
